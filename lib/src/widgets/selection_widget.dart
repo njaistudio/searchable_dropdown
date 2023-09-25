@@ -470,6 +470,7 @@ class SelectionWidgetState<T> extends State<SelectionWidget<T>> {
                   hintStyle: widget.popupProps.searchFieldProps.decoration.hintStyle,
                   onSubmitted: widget.popupProps.searchFieldProps.onSubmit,
                   clearIcon: dynamicClearIcon,
+                  icon: widget.popupProps.searchFieldProps.decoration.icon,
                 ) : TextField(
                   enableIMEPersonalizedLearning: widget.popupProps.searchFieldProps.enableIMEPersonalizedLearning,
                   clipBehavior: widget.popupProps.searchFieldProps.clipBehavior,
@@ -675,6 +676,7 @@ class _SearchTextField extends StatefulWidget {
     this.style,
     this.onSubmitted,
     required this.clearIcon,
+    this.icon,
   }) : super(key: key);
   final TextEditingController? textEditingController;
   final FocusNode? focusNode;
@@ -683,6 +685,7 @@ class _SearchTextField extends StatefulWidget {
   final String? hintText;
   final ValueChanged<String>? onSubmitted;
   final Icon clearIcon;
+  final Widget? icon;
 
   @override
   __SearchTextFieldState createState() {
@@ -720,6 +723,7 @@ class __SearchTextFieldState extends State<_SearchTextField> {
         hintText: widget.hintText,
         border: InputBorder.none,
         hintStyle: widget.hintStyle,
+        icon: widget.icon,
         suffixIcon: !_showClearButton ? null : IconButton(
           onPressed: () {
             widget.textEditingController?.clear();
