@@ -723,7 +723,7 @@ class __SearchTextFieldState extends State<_SearchTextField> {
       textInputAction: widget.textInputAction,
       decoration: InputDecoration(
         isDense: true,
-        contentPadding: widget.decoration.contentPadding,
+        contentPadding: widget.decoration?.contentPadding,
         hintText: widget.hintText,
         border: InputBorder.none,
         hintStyle: widget.hintStyle,
