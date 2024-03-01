@@ -725,6 +725,7 @@ class __SearchTextFieldState extends State<_SearchTextField> {
       },
       textInputAction: widget.textInputAction,
       maxLength: widget.maxLength,
+      buildCounter: (BuildContext context, {int? currentLength, int? maxLength, bool? isFocused}) => null,
       decoration: InputDecoration(
         isDense: true,
         contentPadding: widget.decoration?.contentPadding,
@@ -732,7 +733,6 @@ class __SearchTextFieldState extends State<_SearchTextField> {
         border: InputBorder.none,
         hintStyle: widget.hintStyle,
         icon: widget.icon,
-        counter: SizedBox.shrink(),
         suffixIcon: !_showClearButton ? null : IconButton(
           onPressed: () {
             widget.textEditingController?.clear();
