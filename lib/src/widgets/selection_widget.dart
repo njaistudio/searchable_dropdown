@@ -732,6 +732,7 @@ class __SearchTextFieldState extends State<_SearchTextField> {
         border: InputBorder.none,
         hintStyle: widget.hintStyle,
         icon: widget.icon,
+        counter: SizedBox.shrink(),
         suffixIcon: !_showClearButton ? null : IconButton(
           onPressed: () {
             widget.textEditingController?.clear();
