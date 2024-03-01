@@ -473,6 +473,7 @@ class SelectionWidgetState<T> extends State<SelectionWidget<T>> {
                   icon: widget.popupProps.searchFieldProps.decoration.icon,
                   textInputAction: widget.popupProps.searchFieldProps.textInputAction,
                   decoration: widget.popupProps.searchFieldProps.decoration,
+                  maxLength: widget.popupProps.searchFieldProps.maxLength,
                 ) : TextField(
                   enableIMEPersonalizedLearning: widget.popupProps.searchFieldProps.enableIMEPersonalizedLearning,
                   clipBehavior: widget.popupProps.searchFieldProps.clipBehavior,
@@ -681,6 +682,7 @@ class _SearchTextField extends StatefulWidget {
     this.icon,
     this.textInputAction,
     this.decoration,
+    this.maxLength,
   }) : super(key: key);
   final TextEditingController? textEditingController;
   final FocusNode? focusNode;
@@ -692,6 +694,7 @@ class _SearchTextField extends StatefulWidget {
   final Widget? icon;
   final TextInputAction? textInputAction;
   final InputDecoration? decoration;
+  final int? maxLength;
 
   @override
   __SearchTextFieldState createState() {
@@ -721,6 +724,7 @@ class __SearchTextFieldState extends State<_SearchTextField> {
         _updateClearButtonVisible();
       },
       textInputAction: widget.textInputAction,
+      maxLength: widget.maxLength,
       decoration: InputDecoration(
         isDense: true,
         contentPadding: widget.decoration?.contentPadding,
