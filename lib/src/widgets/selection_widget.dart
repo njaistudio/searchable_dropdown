@@ -474,6 +474,7 @@ class SelectionWidgetState<T> extends State<SelectionWidget<T>> {
                   textInputAction: widget.popupProps.searchFieldProps.textInputAction,
                   decoration: widget.popupProps.searchFieldProps.decoration,
                   maxLength: widget.popupProps.searchFieldProps.maxLength,
+                  textDirection: widget.popupProps.searchFieldProps.textDirection,
                 ) : TextField(
                   enableIMEPersonalizedLearning: widget.popupProps.searchFieldProps.enableIMEPersonalizedLearning,
                   clipBehavior: widget.popupProps.searchFieldProps.clipBehavior,
