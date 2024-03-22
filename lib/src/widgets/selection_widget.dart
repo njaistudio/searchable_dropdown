@@ -683,6 +683,7 @@ class _SearchTextField extends StatefulWidget {
     this.textInputAction,
     this.decoration,
     this.maxLength,
+    this.textDirection,
   }) : super(key: key);
   final TextEditingController? textEditingController;
   final FocusNode? focusNode;
@@ -695,6 +696,7 @@ class _SearchTextField extends StatefulWidget {
   final TextInputAction? textInputAction;
   final InputDecoration? decoration;
   final int? maxLength;
+  final TextDirection? textDirection;
 
   @override
   __SearchTextFieldState createState() {
@@ -726,6 +728,7 @@ class __SearchTextFieldState extends State<_SearchTextField> {
       textInputAction: widget.textInputAction,
       maxLength: widget.maxLength,
       buildCounter: (BuildContext context, {int? currentLength, int? maxLength, bool? isFocused}) => null,
+      textDirection: widget.textDirection,
       decoration: InputDecoration(
         isDense: true,
         contentPadding: widget.decoration?.contentPadding,
